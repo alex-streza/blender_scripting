@@ -4,6 +4,7 @@ import os
 base_dir = 'C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane'
 render_path = base_dir + '/renders/'
 current_dir = base_dir + '/assets/'
+blend_file_path = base_dir + '/GenerateMaterial.blend'
 description = "Humanoidz rule."
 base_image_uri = "https://memphrane/nft/"
 edition_dna_prefix = 0
@@ -129,13 +130,14 @@ variations = [
   add_variation('eye', 'image'),
   add_variation('background', 'hdri'),
   add_variation('body', 'model'),
-  add_variation('light', 'light'),
+  # add_variation('light', 'light'),
 ]
 
 # provide any specific percentages that are required for a given variation and rarity level
 # all provided options are used based on their percentage values to decide which variation to select from
 add_rarity_percent_for_variation('super_rare', 'skin', { 'legendary': 10, 'super_rare': 20, 'rare': 30, 'common': 40 })
-add_rarity_percent_for_variation('super_rare', 'eye', { 'legendary': 25, 'super_rare': 25, 'rare': 25, 'common': 25 })
-add_rarity_percent_for_variation('common', 'background', { 'legendary': 10, 'super_rare': 20, 'rare': 30, 'common': 40 })
-add_rarity_percent_for_variation('common', 'body', { 'legendary': 25, 'super_rare': 25, 'rare': 25, 'common': 25 })
-add_rarity_percent_for_variation('common', 'light', { 'legendary': 25, 'super_rare': 25, 'rare': 25, 'common': 25  })
+
+# add_rarity_percent_for_variation('super_rare', 'eye', { 'legendary': 25, 'super_rare': 25, 'rare': 25, 'common': 25 })
+# add_rarity_percent_for_variation('common', 'background', { 'legendary': 10, 'super_rare': 20, 'rare': 30, 'common': 40 })
+# add_rarity_percent_for_variation('common', 'body', { 'legendary': 25, 'super_rare': 25, 'rare': 25, 'common': 25 })
+# add_rarity_percent_for_variation('common', 'light', { 'legendary': 25, 'super_rare': 25, 'rare': 25, 'common': 25  })

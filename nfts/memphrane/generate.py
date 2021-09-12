@@ -1,5 +1,5 @@
 import sys
-sys.path += ["C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/scripts"]
+sys.path += ["C:/Users/astre/Blockchain/generative_art/nfts/memphrane/"]
 
 import config
 import bpy
@@ -7,9 +7,12 @@ from random import random, choice
 import time
 import json
 import math
+import shutil
 
 render_path = config.render_path
+blend_file_path = config.blend_file_path
 edition_size = config.edition_size
+base_dir = config.base_dir
 edition = str(config.edition_dna_prefix)
 variations = config.variations
 rarity_weights = config.rarity_weights
@@ -18,9 +21,9 @@ base_image_uri = config.base_image_uri
 objects = bpy.context.scene.objects
 materials = [elem for elem in bpy.data.materials]
 
-def select_all_objects():
+def select_object_by_name(_name = 'Model'):
   for obj in objects:
-    obj.select_set(True)
+    obj.select_set(obj.name == _name)
 
 def is_dna_unique(_dna_list = [], _dna = []):
 	found_dna = any(''.join(elem) == ''.join(_dna) for elem in _dna_list)
@@ -91,8 +94,63 @@ def construct_layer_to_dna(_new_dna, _variations, _rarity):
 
   return results
 
+# load and set hdri from path
+def load_hdri(_path):
+  # Get the environment node tree of the current scene
+  node_tree = bpy.context.scene.world.node_tree
+  tree_nodes = node_tree.nodes
+
+  # Clear all nodes
+  tree_nodes.clear()
+
+  # Add Background node
+  node_background = tree_nodes.new(type='ShaderNodeBackground')
+
+  # Add Environment Texture node
+  node_environment = tree_nodes.new('ShaderNodeTexEnvironment')
+  # Load and assign the image to the node property
+  node_environment.image = bpy.data.images.load(_path) # Relative path
+  node_environment.location = -300,0
+
+  # Add Output node
+  node_output = tree_nodes.new(type='ShaderNodeOutputWorld')
+  node_output.location = 200,0
+
+  # Link all nodes
+  links = node_tree.links
+  link = links.new(node_environment.outputs["Color"], node_background.inputs["Color"])
+  link = links.new(node_background.outputs["Background"], node_output.inputs["Surface"])
+
+def hex_to_rgb(colorstring):
+    """ convert #RRGGBB to an (R, G, B) tuple """
+    colorstring = colorstring.strip()
+    if colorstring[0] == '#': colorstring = colorstring[1:]
+    if len(colorstring) != 6:
+        raise ValueError("input #%s is not in #RRGGBB format" % colorstring)
+    r, g, b = colorstring[:2], colorstring[2:4], colorstring[4:]
+    r, g, b = [int(n, 16) / 255.0 for n in (r, g, b)]
+    return (r, g, b)
+
+def update_light_color(_color = '#ffffff'):
+  select_object_by_name('Light')
+  for obj in bpy.context.selected_objects:
+    print(hex_to_rgb(_color))
+    obj.data.color = hex_to_rgb(_color)
+
+def load_material(_path, _name, _object_name = 'Model'):
+  select_object_by_name(_object_name)
+
+  with bpy.data.libraries.load(_path, link=False) as (data_from, data_to):
+    data_to.materials = data_from.materials
+
+    active_material = bpy.data.materials.get(_name)
+
+    for obj in bpy.context.selected_objects:
+      obj.active_material = active_material
+
+
 def generate_nfts():
-  select_all_objects()
+  select_object_by_name('Model')
   # holds which dna has already been used during generation
   dna_list_by_rarity = {}
   # holds metadata for all NFTs
@@ -128,18 +186,14 @@ def generate_nfts():
 
     # load a random body
 
-    # load a random material
-    # active_material = choice(materials)
-    # materials.remove(active_material)
-
-    # for obj in bpy.context.selected_objects:
-    #     if obj.name == 'Model':
-    #         obj.active_material = active_material
+    # # load a random material
+    # load_material('C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/legendary/galaxy/galaxy.blend', 'Galaxy')
 
     # # set random light color
-
+    # update_light_color("#251351")
 
     # # load random background
+    # load_hdri('C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/legendary/outer_space_1/outer_space_2_8k.exr')
 
     # nft_no = str(nft_index + 1)
     # nft_meta = generate_metadata(dna, edition, attributes)
@@ -150,6 +204,10 @@ def generate_nfts():
     # bpy.context.scene.render.filepath = render_path + active_material.name
     # bpy.ops.render.render(write_still=True)
 
+    # generate blend file copy
+    # shutil.copyfile(blend_file_path, base_dir + '/' + nft_no +'.blend')
+
+
   save_metadata(nfts_meta)
 
-generate_nfts()
+# generate_nfts()
