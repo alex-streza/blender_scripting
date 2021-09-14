@@ -1,7 +1,7 @@
 import bpy
 import random
 
-render_path = 'C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/renders/'
+render_path = 'C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/output/'
 
 objects = bpy.context.scene.objects
 

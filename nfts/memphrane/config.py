@@ -2,11 +2,11 @@ import os
 
 
 base_dir = 'C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane'
-render_path = base_dir + '/renders/'
-current_dir = base_dir + '/assets/'
+output_path = base_dir + '/output/'
+assets_dir = base_dir + '/assets/'
 blend_file_path = base_dir + '/GenerateMaterial.blend'
-description = "Humanoidz rule."
-base_image_uri = "https://memphrane/nft/"
+description = 'Humanoidz rule.'
+base_image_uri = 'https://memphrane/nft/'
 edition_dna_prefix = 0
 edition_starts_at = 1
 edition_ends_at = 10
@@ -14,9 +14,9 @@ edition_size = 10
 
 def add_rarity (_id, _from, _to):
   rarity_weight = {
-    "value": _id,
-    "from": _from,
-    "to": _to,
+    'value': _id,
+    'from': _from,
+    'to': _to,
   }
   return rarity_weight
 
@@ -30,66 +30,69 @@ def get_file_elements(_path, _rarity):
   elements = []
   for file_name in entries:
     elements.append({
-      "name": clean_name(file_name),
-      "value": path + '/' + file_name
+      'name': clean_name(file_name),
+      'value': path + '/' + file_name
     })
   return elements
 
+def get_model_elements(_path, _rarity):
+  return [{"value": "thin", "name": "Humanoid1"}]
+
 def get_light_elements(_path, _rarity):
   light_variations = {
-    "common": [
+    'common': [
       {
-        "id": "0/0",
-        'value': "#ffffff",
+        'id': '0/0',
+        'value': '#ffffff',
         'weight': 50,
       },
       {
-        "id": "1/0",
-        'value': "##EABFCB",
+        'id': '1/0',
+        'value': '##EABFCB',
         'weight': 15,
       },
       {
-        "id": "2/0",
-        'value': "#D9D9D9",
+        'id': '2/0',
+        'value': '#D9D9D9',
         'weight': 35,
       }
     ],
-    "rare": [
+    'rare': [
       {
-        "id": "0/0",
-        'value': "#3C6E71",
+        'id': '0/0',
+        'value': '#3C6E71',
         'weight': 50,
       },
       {
-        "id": "1/0",
-        'value': "#284B63",
+        'id': '1/0',
+        'value': '#284B63',
         'weight': 50,
       }
     ],
-    "super_rare": [{
-      "id": "0/0",
-      'value': "##AFC2D5",
+    'super_rare': [{
+      'id': '0/0',
+      'value': '##AFC2D5',
       'weight': 100,
     }],
-    "legendary": [
+    'legendary': [
       {
-        "id": "0/0",
-        'value': "#7D2E68",
+        'id': '0/0',
+        'value': '#7D2E68',
         'weight': 25,
       },
       {
-        "id": "1/0",
-        'value': "#251351",
+        'id': '1/0',
+        'value': '#251351',
         'weight': 25,
       },
       {
-        "id": "2/0",
-        'value': "#DE3C4B",
+        'id': '2/0',
+        'value': '#DE3C4B',
         'weight': 25,
       },
       {
-        "id": "3/0",
-        'value': "#2BC016",
+        'id': '3/0',
+        'value': '#2BC016',
         'weight': 25,
       }
     ],
@@ -98,10 +101,10 @@ def get_light_elements(_path, _rarity):
 
 def get_elements (_path, _rarity, _variation_type):
   switcher = {
-    "image": get_file_elements,
-    "hdri": get_file_elements,
-    "model": get_file_elements,
-    "light": get_light_elements,
+    'image': get_file_elements,
+    'hdri': get_file_elements,
+    'model': get_model_elements,
+    'light': get_light_elements,
   }
 
   return switcher.get(_variation_type)(_path, _rarity)
@@ -114,10 +117,10 @@ def add_variation (_variation_id, _variation_type):
 
   for i in range(len(rarity_weights)):
     rarity = rarity_weights[i]['value']
-    elements_for_rarity = get_elements(current_dir + _variation_id, rarity, _variation_type)
+    elements_for_rarity = get_elements(assets_dir + _variation_id, rarity, _variation_type)
 
     for j in range(len(elements_for_rarity)):
-      id = str(edition_dna_prefix) + "/"+ str(j)
+      id = str(edition_dna_prefix) + '/'+ str(j)
       if _variation_type != 'light':
         elements_for_rarity[j].update({'id': id, 'weight': 100})
 

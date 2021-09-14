@@ -1,5 +1,6 @@
 import sys
 sys.path += ['C:/Users/astre/Blockchain/generative_art/nfts/memphrane/']
+sys.path += ['C:/Users/astre/AppData/Roaming/Python/Python39/site-packages']
 
 import config
 import bpy
@@ -8,10 +9,14 @@ import time
 import json
 import math
 import shutil
+import pip
+pip.main(['install', 'pillow', '--user'])
+
 from PIL import Image, ImageFont, ImageDraw
 
-render_path = config.render_path
+output_path = config.output_path
 blend_file_path = config.blend_file_path
+assets_dir = config.assets_dir
 edition_size = config.edition_size
 edition_starts_at = config.edition_starts_at
 edition_ends_at = config.edition_ends_at
@@ -22,7 +27,6 @@ rarity_weights = config.rarity_weights
 base_image_uri = config.base_image_uri
 
 objects = bpy.context.scene.objects
-materials = [elem for elem in bpy.data.materials]
 
 def select_object_by_name(_name = 'Model'):
   for obj in objects:
@@ -55,20 +59,20 @@ def create_dna(_variations, _rarity):
   return rand_nums
 
 def save_metadata_single_file(_nft, _nft_no):
-  with open(render_path + _nft_no + '.json', 'w') as fp:
+  with open(output_path + _nft_no + '.json', 'w') as fp:
     json.dump(_nft, fp)
 
 def save_metadata(_nfts):
-  with open(render_path + 'metadata.json', 'w') as fp:
+  with open(output_path + 'metadata.json', 'w') as fp:
     json.dump(_nfts, fp)
 
-def generate_metadata(_dna, _edition, _attributes ):
+def generate_metadata(_dna, _nft_no, _attributes ):
   date_time = str(time.time())
   temp_metadata = {
     'dna': _dna,
-    'name': '#' + _edition,
+    'name': '#' + _nft_no,
     'description': 'This is an NFT made by the coolest generative code.',
-    'image': base_image_uri + _edition,
+    'image': base_image_uri + _nft_no,
     'date': date_time,
     'attributes': _attributes
   }
@@ -129,40 +133,42 @@ def load_material(_path, _name, _object_name = 'Model'):
 
 def sign_nft(_path, _nft_no):
   nft_image = Image.open(_path)
-  font = ImageFont.truetype('./Geometria.ttf', 500)
+  font = ImageFont.truetype('./Geometria-Bold.ttf', 160)
   image_editable = ImageDraw.Draw(nft_image)
-  image_editable.text((15,15), _nft_no, (237, 230, 211), font=font)
+  image_editable.text((50, 50), "#" + _nft_no, (255, 255, 255), font=font)
   nft_image.save(_path)
 
 def generate_nft(_new_dna, _variations, _nft_index):
   # propagate information about  required layer contained within config into a mapping object
 
   # load a random body
+  # bpy.ops.import_scene.obj(filepath=assets_dir + "body/Humanoid1.blend", axis_forward='-Z', axis_up='Y', filter_glob="*.obj;*.mtl")
+  blend_file_path = assets_dir + "body/Humanoid3.blend"
+  bpy.ops.wm.open_mainfile(filepath=blend_file_path)
 
   # # load a random material
-  # load_material('C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/legendary/galaxy/galaxy.blend', 'Galaxy')
+  load_material('C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/legendary/galaxy/galaxy.blend', 'Galaxy')
 
   # # set random light color
-  # update_light_color('#251351')
+  update_light_color('#251351')
 
   # # load random background
-  # load_hdri('C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/legendary/outer_space_1/outer_space_2_8k.exr')
+  load_hdri('C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/legendary/outer_space_1/outer_space_2_8k.exr')
 
   nft_no = str(_nft_index + 1)
 
-  nft_meta = generate_metadata(_new_dna, edition, {})
+  nft_meta = generate_metadata(_new_dna, nft_no, {})
 
   save_metadata_single_file(nft_meta, nft_no)
 
-  bpy.context.scene.render.filepath = render_path + nft_no
+  bpy.context.scene.render.filepath = output_path + nft_no
   bpy.ops.render.render(write_still=True)
 
-  # shutil.copyfile(blend_file_path, base_dir + '/' + nft_no +'.blend')
+  shutil.copyfile(blend_file_path, output_path + '/' + nft_no +'.blend')
 
   return nft_meta
 
 def generate_nfts():
-  select_object_by_name('Model')
   dna_list_by_rarity = {}
   nfts_meta = []
 
@@ -180,14 +186,14 @@ def generate_nfts():
     new_dna = create_dna(variations, rarity)
     print('- dna: ' + str(new_dna))
 
-    sign_nft(render_path + nft_no + ".png", nft_no)
-
     if is_dna_unique(dna_list_by_rarity[rarity], new_dna):
       new_dna = create_dna(variations, rarity)
 
       print('- dna: ' + '-'.join(new_dna))
 
       nfts_meta.append(generate_nft(new_dna, variations, nft_index))
+
+      sign_nft(output_path + nft_no + '.png', nft_no)
 
     else: print('DNA exists!')
 
