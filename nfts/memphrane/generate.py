@@ -2,6 +2,7 @@ import sys
 sys.path += ['C:/Users/astre/Blockchain/generative_art/nfts/memphrane/']
 sys.path += ['C:/Users/astre/AppData/Roaming/Python/Python39/site-packages']
 
+import os
 import config
 import bpy
 from random import random
@@ -28,7 +29,7 @@ base_image_uri = config.base_image_uri
 
 objects = bpy.context.scene.objects
 
-def select_object_by_name(_name = 'Model'):
+def select_object_by_name(_name = 'Model1'):
   for obj in objects:
     obj.select_set(obj.name == _name)
 
@@ -120,16 +121,21 @@ def update_light_color(_color = '#ffffff'):
   for obj in bpy.context.selected_objects:
     obj.data.color = hex_to_rgb(_color)
 
-def load_material(_path, _name, _object_name = 'Model'):
+def load_material(_path, _name, _object_name = 'Humanoid'):
   select_object_by_name(_object_name)
 
   with bpy.data.libraries.load(_path, link=False) as (data_from, data_to):
     data_to.materials = data_from.materials
 
     active_material = bpy.data.materials.get(_name)
+    bpy.data.objects[_object_name].active_material = active_material
 
-    for obj in bpy.context.selected_objects:
-      obj.active_material = active_material
+def load_model(_model):
+  model = bpy.data.objects[_model]
+  model.location = [0, 0, 0]
+  model.name = "Humanoid"
+
+  return model
 
 def sign_nft(_path, _nft_no):
   nft_image = Image.open(_path)
@@ -142,9 +148,8 @@ def generate_nft(_new_dna, _variations, _nft_index):
   # propagate information about  required layer contained within config into a mapping object
 
   # load a random body
-  # bpy.ops.import_scene.obj(filepath=assets_dir + "body/Humanoid1.blend", axis_forward='-Z', axis_up='Y', filter_glob="*.obj;*.mtl")
-  blend_file_path = assets_dir + "body/Humanoid3.blend"
-  bpy.ops.wm.open_mainfile(filepath=blend_file_path)
+  model_name = "Humanoid1"
+  model = load_model(model_name)
 
   # # load a random material
   load_material('C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/legendary/galaxy/galaxy.blend', 'Galaxy')
@@ -153,7 +158,7 @@ def generate_nft(_new_dna, _variations, _nft_index):
   update_light_color('#251351')
 
   # # load random background
-  load_hdri('C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/legendary/outer_space_1/outer_space_2_8k.exr')
+  load_hdri('C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/legendary/outer_space_1/outer_space_2_8k.exr', model.name)
 
   nft_no = str(_nft_index + 1)
 
@@ -164,7 +169,10 @@ def generate_nft(_new_dna, _variations, _nft_index):
   bpy.context.scene.render.filepath = output_path + nft_no
   bpy.ops.render.render(write_still=True)
 
-  shutil.copyfile(blend_file_path, output_path + '/' + nft_no +'.blend')
+  model.location = [0, 0, 20]
+  model.name = model_name
+
+  # shutil.copyfile(blend_file_path, output_path + '/' + nft_no +'.blend')
 
   return nft_meta
 
@@ -197,6 +205,7 @@ def generate_nfts():
 
     else: print('DNA exists!')
 
+    break
   save_metadata(nfts_meta)
 
 generate_nfts()
