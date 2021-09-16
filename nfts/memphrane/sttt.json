@@ -4,165 +4,321 @@
 		"elements": {
 			"legendary": [
 				{
-					"name": "ga",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/legendary/galaxy",
+					"name": "galaxy",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/legendary/galaxy.blend",
 					"id": "0/0",
 					"weight": 100
 				},
 				{
-					"name": "procedural_eye_943ea835-c574-49a6-82b0-988d9d50",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/legendary/procedural_eye_943ea835-c574-49a6-82b0-988d9d501952",
+					"name": "textures",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/legendary/textures",
 					"id": "0/1",
 					"weight": 100
 				},
 				{
-					"name": "sub-dwarf_star_c546f56f-6592-4ea1-8f95-2a242dca",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/legendary/sub-dwarf_star_c546f56f-6592-4ea1-8f95-2a242dca92d7",
+					"name": "procedural_eye_dcfd7c00-ffdb-4e3f-b24d-ec25d65144ba",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/legendary/procedural_eye_dcfd7c00-ffdb-4e3f-b24d-ec25d65144ba.blend",
 					"id": "0/2",
+					"weight": 100
+				},
+				{
+					"name": "textures",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/legendary/textures",
+					"id": "0/3",
+					"weight": 100
+				},
+				{
+					"name": "sub-dwarf_star_42ac0587-62a4-440a-938a-d0c168947981",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/legendary/sub-dwarf_star_42ac0587-62a4-440a-938a-d0c168947981.blend",
+					"id": "0/4",
+					"weight": 100
+				},
+				{
+					"name": "textures",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/legendary/textures",
+					"id": "0/5",
 					"weight": 100
 				}
 			],
 			"super_rare": [
 				{
-					"name": "amber_104f261d-3feb-4293-ac00-5add5d2e",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/super_rare/amber_104f261d-3feb-4293-ac00-5add5d2e13b5",
+					"name": "amber_786f14d4-c124-4a27-a70f-4f3343e24db2",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/super_rare/amber_786f14d4-c124-4a27-a70f-4f3343e24db2.blend",
 					"id": "0/0",
 					"weight": 100
 				},
 				{
-					"name": "fish_skin_ccc1edd1-2c59-491d-807a-c2b2efb9",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/super_rare/fish_skin_ccc1edd1-2c59-491d-807a-c2b2efb9a563",
+					"name": "textures",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/super_rare/textures",
 					"id": "0/1",
 					"weight": 100
 				},
 				{
-					"name": "lava_flow_01a9a52b-570f-4830-b227-46b60ec4",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/super_rare/lava_flow_01a9a52b-570f-4830-b227-46b60ec4439f",
+					"name": "fish_skin_cee56345-c175-458e-87e6-86d4fb1fc517",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/super_rare/fish_skin_cee56345-c175-458e-87e6-86d4fb1fc517.blend",
 					"id": "0/2",
 					"weight": 100
 				},
 				{
-					"name": "procedural_vulcano_core_32dbfae8-fa4a-4b68-bc64-bb6120d3",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/super_rare/procedural_vulcano_core_32dbfae8-fa4a-4b68-bc64-bb6120d3df75",
+					"name": "textures",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/super_rare/textures",
 					"id": "0/3",
+					"weight": 100
+				},
+				{
+					"name": "lava_flow_7e226fc4-d0aa-40ed-b224-2c2ee8b94bd6",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/super_rare/lava_flow_7e226fc4-d0aa-40ed-b224-2c2ee8b94bd6.blend",
+					"id": "0/4",
+					"weight": 100
+				},
+				{
+					"name": "textures",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/super_rare/textures",
+					"id": "0/5",
+					"weight": 100
+				},
+				{
+					"name": "procedural_vulcano_core_30d08f0f-ae72-43ea-888d-eba09ca40b7b",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/super_rare/procedural_vulcano_core_30d08f0f-ae72-43ea-888d-eba09ca40b7b.blend",
+					"id": "0/6",
+					"weight": 100
+				},
+				{
+					"name": "textures",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/super_rare/textures",
+					"id": "0/7",
 					"weight": 100
 				}
 			],
 			"rare": [
 				{
-					"name": "glass_e70488ac-7e66-4af2-af6b-a2fd61db",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/rare/glass_e70488ac-7e66-4af2-af6b-a2fd61dbfa86",
+					"name": "glass_cf2566dd-b1c7-4939-a5f8-7a58f6b54649",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/rare/glass_cf2566dd-b1c7-4939-a5f8-7a58f6b54649.blend",
 					"id": "0/0",
 					"weight": 100
 				},
 				{
-					"name": "jade_fddbf898-26ae-4e57-9fca-4208dd51",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/rare/jade_fddbf898-26ae-4e57-9fca-4208dd519d16",
+					"name": "textures",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/rare/textures",
 					"id": "0/1",
 					"weight": 100
 				},
 				{
-					"name": "plastic_shader_981d3bb2-3273-47a5-9d3b-242a9929",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/rare/plastic_shader_981d3bb2-3273-47a5-9d3b-242a9929af5c",
+					"name": "jade_58ad7870-8042-43ce-8d83-dbd7fa3502f6",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/rare/jade_58ad7870-8042-43ce-8d83-dbd7fa3502f6.blend",
 					"id": "0/2",
 					"weight": 100
 				},
 				{
-					"name": "procedural_sci-fi_panels_1733bcf8-eac1-47cb-bfd2-068f268b",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/rare/procedural_sci-fi_panels_1733bcf8-eac1-47cb-bfd2-068f268b139e",
+					"name": "textures",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/rare/textures",
 					"id": "0/3",
 					"weight": 100
 				},
 				{
-					"name": "procedural_tv_wall_programming_3a7a40dd-a646-4305-9797-f0179ae7",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/rare/procedural_tv_wall_programming_3a7a40dd-a646-4305-9797-f0179ae7aa8e",
+					"name": "plastic_shader_cb7c6f4a-bbaf-4c48-87e2-9cf5d11238d9",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/rare/plastic_shader_cb7c6f4a-bbaf-4c48-87e2-9cf5d11238d9.blend",
 					"id": "0/4",
 					"weight": 100
 				},
 				{
-					"name": "red_linen_679a64e6-2159-4bc4-815c-e375dcf2",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/rare/red_linen_679a64e6-2159-4bc4-815c-e375dcf23940",
+					"name": "textures",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/rare/textures",
 					"id": "0/5",
 					"weight": 100
 				},
 				{
-					"name": "skin_base_02_fdfd09c1-27f4-4cd5-af3e-392b3217",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/rare/skin_base_02_fdfd09c1-27f4-4cd5-af3e-392b32170ad1",
+					"name": "procedural_sci-fi_panels_85be099d-e8dd-42a5-8bd3-21d4d4c72cfb",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/rare/procedural_sci-fi_panels_85be099d-e8dd-42a5-8bd3-21d4d4c72cfb.blend",
 					"id": "0/6",
 					"weight": 100
 				},
 				{
-					"name": "skin_zombie_03_d2820322-b6f6-4bbf-b49c-0ac8630f",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/rare/skin_zombie_03_d2820322-b6f6-4bbf-b49c-0ac8630fab94",
+					"name": "textures",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/rare/textures",
 					"id": "0/7",
 					"weight": 100
 				},
 				{
-					"name": "stone_alien_274221ff-423b-4d81-9ff1-b8a0762a",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/rare/stone_alien_274221ff-423b-4d81-9ff1-b8a0762ac238",
+					"name": "procedural_tv_wall_programming_43740fb4-f106-49f9-b9ae-ef9e9969ea19",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/rare/procedural_tv_wall_programming_43740fb4-f106-49f9-b9ae-ef9e9969ea19.blend",
 					"id": "0/8",
+					"weight": 100
+				},
+				{
+					"name": "textures",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/rare/textures",
+					"id": "0/9",
+					"weight": 100
+				},
+				{
+					"name": "red_linen_1K_c059713b-cd69-43a3-90c8-d643ba8f06f6",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/rare/red_linen_1K_c059713b-cd69-43a3-90c8-d643ba8f06f6.blend",
+					"id": "0/10",
+					"weight": 100
+				},
+				{
+					"name": "textures_1k",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/rare/textures_1k",
+					"id": "0/11",
+					"weight": 100
+				},
+				{
+					"name": "skin_base_02_1K_4cfa9fbb-e056-440c-911d-1f5bc26c0378",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/rare/skin_base_02_1K_4cfa9fbb-e056-440c-911d-1f5bc26c0378.blend",
+					"id": "0/12",
+					"weight": 100
+				},
+				{
+					"name": "textures_1k",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/rare/textures_1k",
+					"id": "0/13",
+					"weight": 100
+				},
+				{
+					"name": "skin_zombie_03_1K_3bd87bd7-4aee-43a9-b413-6a9d61847c09",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/rare/skin_zombie_03_1K_3bd87bd7-4aee-43a9-b413-6a9d61847c09.blend",
+					"id": "0/14",
+					"weight": 100
+				},
+				{
+					"name": "textures_1k",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/rare/textures_1k",
+					"id": "0/15",
+					"weight": 100
+				},
+				{
+					"name": "stone_alien_1K_bc975b54-9217-4265-ae5d-2df09b0ad2e9",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/rare/stone_alien_1K_bc975b54-9217-4265-ae5d-2df09b0ad2e9.blend",
+					"id": "0/16",
+					"weight": 100
+				},
+				{
+					"name": "textures_1k",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/rare/textures_1k",
+					"id": "0/17",
 					"weight": 100
 				}
 			],
 			"common": [
 				{
-					"name": "bamboo_wood_3eab2550-a332-48ed-b9aa-26fc6530",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/common/bamboo_wood_3eab2550-a332-48ed-b9aa-26fc65309a16",
+					"name": "bamboo_wood_e63fd37f-6050-4b2b-a087-ab539ab32ef6",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/common/bamboo_wood_e63fd37f-6050-4b2b-a087-ab539ab32ef6.blend",
 					"id": "0/0",
 					"weight": 100
 				},
 				{
-					"name": "burn_wood_f4b54e59-9193-4cd5-952d-1c7edbfa",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/common/burn_wood_f4b54e59-9193-4cd5-952d-1c7edbfa1449",
+					"name": "textures",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/common/textures",
 					"id": "0/1",
 					"weight": 100
 				},
 				{
-					"name": "norway_spruce_bark_b8e1144c-5200-49c4-98de-83c1e7c7",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/common/norway_spruce_bark_b8e1144c-5200-49c4-98de-83c1e7c7ca5a",
+					"name": "burn_wood_8afe649f-cafd-4334-ba7e-d57c2a9c49d5",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/common/burn_wood_8afe649f-cafd-4334-ba7e-d57c2a9c49d5.blend",
 					"id": "0/2",
 					"weight": 100
 				},
 				{
-					"name": "oak_wood_2600e30b-1883-4960-a501-d9026ddd",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/common/oak_wood_2600e30b-1883-4960-a501-d9026dddf7b3",
+					"name": "textures",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/common/textures",
 					"id": "0/3",
 					"weight": 100
 				},
 				{
-					"name": "plastic_02_ca05d334-5c3a-4540-b6e9-a784f9d3",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/common/plastic_02_ca05d334-5c3a-4540-b6e9-a784f9d3f4f5",
+					"name": "norway_spruce_bark_1K_605de515-f4a2-483d-9af8-71ae77f533ed",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/common/norway_spruce_bark_1K_605de515-f4a2-483d-9af8-71ae77f533ed.blend",
 					"id": "0/4",
 					"weight": 100
 				},
 				{
-					"name": "plastic_04_4d64de62-e053-49ba-a297-19370208",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/common/plastic_04_4d64de62-e053-49ba-a297-193702088fe2",
+					"name": "textures_1k",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/common/textures_1k",
 					"id": "0/5",
 					"weight": 100
 				},
 				{
-					"name": "red_gingham_6d322c61-f4e2-4ad3-bd9f-61accd73",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/common/red_gingham_6d322c61-f4e2-4ad3-bd9f-61accd73b8a1",
+					"name": "oak_wood_1K_e817394d-aca5-4827-bc4a-85664b5f0f48",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/common/oak_wood_1K_e817394d-aca5-4827-bc4a-85664b5f0f48.blend",
 					"id": "0/6",
 					"weight": 100
 				},
 				{
-					"name": "sand_4196cc5f-8cae-4250-bec8-cc3d6f37",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/common/sand_4196cc5f-8cae-4250-bec8-cc3d6f37a916",
+					"name": "textures_1k",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/common/textures_1k",
 					"id": "0/7",
 					"weight": 100
 				},
 				{
-					"name": "stone_03_84bebe08-0ef6-48d3-88b3-17e079a7",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/common/stone_03_84bebe08-0ef6-48d3-88b3-17e079a7bfce",
+					"name": "plastic_02_1K_61328c60-0383-4e0c-ae84-027a77e731f9",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/common/plastic_02_1K_61328c60-0383-4e0c-ae84-027a77e731f9.blend",
 					"id": "0/8",
 					"weight": 100
 				},
 				{
-					"name": "wood_c9c73d5b-5f74-4deb-a192-9f3ef5cf",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/common/wood_c9c73d5b-5f74-4deb-a192-9f3ef5cf7bed",
+					"name": "textures_1k",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/common/textures_1k",
 					"id": "0/9",
+					"weight": 100
+				},
+				{
+					"name": "plastic_04_1K_a476b277-a8de-4289-9c2d-748f6fd456c3",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/common/plastic_04_1K_a476b277-a8de-4289-9c2d-748f6fd456c3.blend",
+					"id": "0/10",
+					"weight": 100
+				},
+				{
+					"name": "textures_1k",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/common/textures_1k",
+					"id": "0/11",
+					"weight": 100
+				},
+				{
+					"name": "red_gingham_1K_dbccffc0-58e9-4d19-8033-72948c19a9de",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/common/red_gingham_1K_dbccffc0-58e9-4d19-8033-72948c19a9de.blend",
+					"id": "0/12",
+					"weight": 100
+				},
+				{
+					"name": "textures_1k",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/common/textures_1k",
+					"id": "0/13",
+					"weight": 100
+				},
+				{
+					"name": "sand_b8abb4ad-d0e4-443e-9c61-73872c7e1f3f",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/common/sand_b8abb4ad-d0e4-443e-9c61-73872c7e1f3f.blend",
+					"id": "0/14",
+					"weight": 100
+				},
+				{
+					"name": "textures",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/common/textures",
+					"id": "0/15",
+					"weight": 100
+				},
+				{
+					"name": "stone_03_1K_bbaf4192-9e90-4330-95c2-9141965e4946",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/common/stone_03_1K_bbaf4192-9e90-4330-95c2-9141965e4946.blend",
+					"id": "0/16",
+					"weight": 100
+				},
+				{
+					"name": "textures_1k",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/common/textures_1k",
+					"id": "0/17",
+					"weight": 100
+				},
+				{
+					"name": "textures",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/common/textures",
+					"id": "0/18",
+					"weight": 100
+				},
+				{
+					"name": "wood_40c991a0-34dd-4a54-8462-5e930ab6b955",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/common/wood_40c991a0-34dd-4a54-8462-5e930ab6b955.blend",
+					"id": "0/19",
 					"weight": 100
 				}
 			]
@@ -174,171 +330,191 @@
 		"elements": {
 			"legendary": [
 				{
-					"name": "outer_spa",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/legendary/outer_space_1",
+					"name": "outer_space_1_4k",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/legendary/outer_space_1_4k.exr",
 					"id": "0/0",
 					"weight": 100
 				},
 				{
-					"name": "outer_space_2_0679a249-0fec-41b7-91c9-121ead52",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/legendary/outer_space_2_0679a249-0fec-41b7-91c9-121ead525b1f",
+					"name": "outer_space_2_8k",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/legendary/outer_space_2_8k.exr",
 					"id": "0/1",
 					"weight": 100
 				},
 				{
-					"name": "outer_space_3_a91e2069-470d-4e08-a1de-b7eb48f7",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/legendary/outer_space_3_a91e2069-470d-4e08-a1de-b7eb48f7ef5a",
+					"name": "outer_space_2_4K_680bbe00-941d-445b-8a80-7a1d02596aad",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/legendary/outer_space_2_4K_680bbe00-941d-445b-8a80-7a1d02596aad.exr",
 					"id": "0/2",
+					"weight": 100
+				},
+				{
+					"name": "outer_space_3_4K_54999a29-040e-46d4-a2cb-15a5d3daaf1d",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/legendary/outer_space_3_4K_54999a29-040e-46d4-a2cb-15a5d3daaf1d.exr",
+					"id": "0/3",
 					"weight": 100
 				}
 			],
 			"super_rare": [
 				{
-					"name": "abstract_light_rays_78868b64-0103-4e90-8606-f6492690",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/super_rare/abstract_light_rays_78868b64-0103-4e90-8606-f649269035e9",
+					"name": "abstract_light_rays_4K_051b70d0-4f19-4eed-a393-68e6e514af0e",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/super_rare/abstract_light_rays_4K_051b70d0-4f19-4eed-a393-68e6e514af0e.exr",
 					"id": "0/0",
 					"weight": 100
 				},
 				{
-					"name": "herkuless\u00e4ulen_5f4ca759-e817-40a9-9e78-6a3bc9fd",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/super_rare/herkuless\u00e4ulen_5f4ca759-e817-40a9-9e78-6a3bc9fd155a",
+					"name": "herkuless\u00e4ulen_4K_d62a0062-baa3-4651-884c-2c9462d4efc5",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/super_rare/herkuless\u00e4ulen_4K_d62a0062-baa3-4651-884c-2c9462d4efc5.hdr",
 					"id": "0/1",
 					"weight": 100
 				},
 				{
-					"name": "indoor_swimming_pool_under_water_cc20a73c-1894-43ed-8dbc-0b093caf",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/super_rare/indoor_swimming_pool_under_water_cc20a73c-1894-43ed-8dbc-0b093caf940d",
+					"name": "indoor_swimming_pool_under_water_4K_32ce748a-e8cc-4a41-a845-c39b921a9b37",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/super_rare/indoor_swimming_pool_under_water_4K_32ce748a-e8cc-4a41-a845-c39b921a9b37.exr",
 					"id": "0/2",
 					"weight": 100
 				},
 				{
-					"name": "spaceship_corridor_dfadc95d-ab7e-40d0-a6a5-c9b18613",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/super_rare/spaceship_corridor_dfadc95d-ab7e-40d0-a6a5-c9b1861312cc",
+					"name": "spaceship_corridor_4K_291e0f66-fb2a-4a12-91e7-9e7f81d8cd5f",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/super_rare/spaceship_corridor_4K_291e0f66-fb2a-4a12-91e7-9e7f81d8cd5f.exr",
 					"id": "0/3",
 					"weight": 100
 				}
 			],
 			"rare": [
 				{
-					"name": "abstract_pipes_2bf33e4a-b447-4d4c-9764-3f5e8124",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/rare/abstract_pipes_2bf33e4a-b447-4d4c-9764-3f5e81241982",
+					"name": "abstract_pipes_4K_91a9a90f-bcda-452f-b611-14441550b5a7",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/rare/abstract_pipes_4K_91a9a90f-bcda-452f-b611-14441550b5a7.exr",
 					"id": "0/0",
 					"weight": 100
 				},
 				{
-					"name": "abstract_pipes_516b99c9-ea99-4ea7-ab4a-e0f81dce",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/rare/abstract_pipes_516b99c9-ea99-4ea7-ab4a-e0f81dcef839",
+					"name": "abstract_pipes_4K_897b9e4d-0288-4a12-9fa8-05e3b2f63b4b",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/rare/abstract_pipes_4K_897b9e4d-0288-4a12-9fa8-05e3b2f63b4b.exr",
 					"id": "0/1",
 					"weight": 100
 				},
 				{
-					"name": "before_sunrise_40_000_feet_above_earth_486cde52-f93e-4e75-a51b-c8614b97",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/rare/before_sunrise_40_000_feet_above_earth_486cde52-f93e-4e75-a51b-c8614b97a4f1",
+					"name": "before_sunrise_40_000_feet_above_earth_4K_9aaaa5a8-e817-4936-b9ca-2fb32179bf7d",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/rare/before_sunrise_40_000_feet_above_earth_4K_9aaaa5a8-e817-4936-b9ca-2fb32179bf7d.exr",
 					"id": "0/2",
 					"weight": 100
 				},
 				{
-					"name": "boiler_room_f973e7f6-2a93-41b4-bbe8-6660abbe",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/rare/boiler_room_f973e7f6-2a93-41b4-bbe8-6660abbe407d",
+					"name": "boiler_room_4K_ed3b4148-f222-4514-b671-6e13209ffbdd",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/rare/boiler_room_4K_ed3b4148-f222-4514-b671-6e13209ffbdd.hdr",
 					"id": "0/3",
 					"weight": 100
 				},
 				{
-					"name": "missile_launch_facility_03_f8bf9aec-9273-432d-837e-f2ddd34b",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/rare/missile_launch_facility_03_f8bf9aec-9273-432d-837e-f2ddd34be172",
+					"name": "missile_launch_facility_03_4K_23431aa7-1a15-4b3b-892e-6042855602ef",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/rare/missile_launch_facility_03_4K_23431aa7-1a15-4b3b-892e-6042855602ef.hdr",
 					"id": "0/4",
 					"weight": 100
 				},
 				{
-					"name": "mossy_forest_43c7538e-1a7d-4fbb-b365-fb38cba4",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/rare/mossy_forest_43c7538e-1a7d-4fbb-b365-fb38cba46121",
+					"name": "mossy_forest_4K_e9ebe923-aa65-417b-8987-0335a9dc4535",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/rare/mossy_forest_4K_e9ebe923-aa65-417b-8987-0335a9dc4535.hdr",
 					"id": "0/5",
 					"weight": 100
 				}
 			],
 			"common": [
 				{
-					"name": "gym_entrance_db0b286c-3c55-403d-9ed1-fca58087",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/common/gym_entrance_db0b286c-3c55-403d-9ed1-fca580877643",
+					"name": "gym_entrance_4K_8b915589-c437-4ec3-8170-6b6755c623d1",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/common/gym_entrance_4K_8b915589-c437-4ec3-8170-6b6755c623d1.hdr",
 					"id": "0/0",
 					"weight": 100
 				},
 				{
-					"name": "outdoor_umbrellas_2990d537-db0e-4e13-b1f3-ccc1d232",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/common/outdoor_umbrellas_2990d537-db0e-4e13-b1f3-ccc1d232fb02",
+					"name": "outdoor_umbrellas_4K_5dff8670-d129-4f19-bc49-76018e4fbf18",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/common/outdoor_umbrellas_4K_5dff8670-d129-4f19-bc49-76018e4fbf18.hdr",
 					"id": "0/1",
 					"weight": 100
 				},
 				{
-					"name": "peppermint_powerplant_414fa01f-e700-47e5-9f87-183303a2",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/common/peppermint_powerplant_414fa01f-e700-47e5-9f87-183303a24d3b",
+					"name": "peppermint_powerplant_4K_b92fe678-98b5-48dd-81f6-0c4ea0bde5f9",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/common/peppermint_powerplant_4K_b92fe678-98b5-48dd-81f6-0c4ea0bde5f9.hdr",
 					"id": "0/2",
 					"weight": 100
 				},
 				{
-					"name": "satara_night_c8b15fe8-eb58-4ba1-824e-82cb5927",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/common/satara_night_c8b15fe8-eb58-4ba1-824e-82cb59271b70",
+					"name": "satara_night_4K_d7e283d7-e720-4122-9d67-acfebdd1c813",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/common/satara_night_4K_d7e283d7-e720-4122-9d67-acfebdd1c813.hdr",
 					"id": "0/3",
 					"weight": 100
 				},
 				{
-					"name": "secluded_beach_40316257-5001-4239-95c3-af3655fa",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/common/secluded_beach_40316257-5001-4239-95c3-af3655fa62d9",
+					"name": "secluded_beach_4K_9545ca3e-0152-403e-a8df-5be472f9bbbd",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/common/secluded_beach_4K_9545ca3e-0152-403e-a8df-5be472f9bbbd.hdr",
 					"id": "0/4",
 					"weight": 100
 				},
 				{
-					"name": "snowy_forest_path_02_0efdcee3-e90b-4533-bb3a-36b43a61",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/common/snowy_forest_path_02_0efdcee3-e90b-4533-bb3a-36b43a61d9f3",
+					"name": "snowy_forest_path_02_4K_4231974d-5ce1-45ec-9855-2eb1d787b5ea",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/common/snowy_forest_path_02_4K_4231974d-5ce1-45ec-9855-2eb1d787b5ea.hdr",
 					"id": "0/5",
 					"weight": 100
 				},
 				{
-					"name": "snowy_hillside_b4f0d96a-454d-4a4f-9870-9a0b99da",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/common/snowy_hillside_b4f0d96a-454d-4a4f-9870-9a0b99da53b1",
+					"name": "snowy_hillside_4K_f4d42140-40ad-4077-9280-405f22ea6d60_jRHBwc7",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/common/snowy_hillside_4K_f4d42140-40ad-4077-9280-405f22ea6d60_jRHBwc7.exr",
 					"id": "0/6",
 					"weight": 100
 				},
 				{
-					"name": "underwater_66c6462b-15fd-4c83-86b1-d2c2d11b",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/common/underwater_66c6462b-15fd-4c83-86b1-d2c2d11b24ed",
+					"name": "underwater_0_5K_ec4154fe-1270-4775-ae15-87c6a79cab90",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/common/underwater_0_5K_ec4154fe-1270-4775-ae15-87c6a79cab90.exr",
 					"id": "0/7",
 					"weight": 100
 				},
 				{
-					"name": "urban_alley_01_89fb4624-9ef6-416e-bb87-00afdf5b",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/common/urban_alley_01_89fb4624-9ef6-416e-bb87-00afdf5b181f",
+					"name": "underwater_4K_2c62e0fa-25e6-4e81-8cea-5ac394814392",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/common/underwater_4K_2c62e0fa-25e6-4e81-8cea-5ac394814392.exr",
 					"id": "0/8",
 					"weight": 100
 				},
 				{
-					"name": "vignaioli_night_83fa8b59-1071-46cd-bda8-2088391a",
-					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/common/vignaioli_night_83fa8b59-1071-46cd-bda8-2088391aa797",
+					"name": "urban_alley_01_4K_97e2ddd0-6f86-4d37-b612-18baaa068523",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/common/urban_alley_01_4K_97e2ddd0-6f86-4d37-b612-18baaa068523.hdr",
 					"id": "0/9",
+					"weight": 100
+				},
+				{
+					"name": "vignaioli_night_4K_03a744a0-b132-414e-bc75-80af261df1fa",
+					"value": "C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/common/vignaioli_night_4K_03a744a0-b132-414e-bc75-80af261df1fa.hdr",
+					"id": "0/10",
 					"weight": 100
 				}
 			]
 		}
 	},
-	{ "id": "body", "elements": { "legendary": [], "super_rare": [], "rare": [], "common": [] } },
+	{
+		"id": "body",
+		"elements": {
+			"legendary": [{ "value": "thin", "name": "Humanoid1", "id": "0/0", "weight": 100 }],
+			"super_rare": [{ "value": "thin", "name": "Humanoid1", "id": "0/0", "weight": 100 }],
+			"rare": [{ "value": "thin", "name": "Humanoid1", "id": "0/0", "weight": 100 }],
+			"common": [{ "value": "thin", "name": "Humanoid1", "id": "0/0", "weight": 100 }]
+		}
+	},
 	{
 		"id": "light",
 		"elements": {
 			"legendary": [
-				{ "value": "#7D2E68", "weight": 25 },
-				{ "value": "#251351", "weight": 25 },
-				{ "value": "#DE3C4B", "weight": 25 },
-				{ "value": "#2BC016", "weight": 25 }
+				{ "id": "0/0", "value": "#7D2E68", "weight": 25 },
+				{ "id": "1/0", "value": "#251351", "weight": 25 },
+				{ "id": "2/0", "value": "#DE3C4B", "weight": 25 },
+				{ "id": "3/0", "value": "#2BC016", "weight": 25 }
 			],
-			"super_rare": [{ "value": "##AFC2D5", "weight": 100 }],
+			"super_rare": [{ "id": "0/0", "value": "##AFC2D5", "weight": 100 }],
 			"rare": [
-				{ "value": "#3C6E71", "weight": 50 },
-				{ "value": "#284B63", "weight": 50 }
+				{ "id": "0/0", "value": "#3C6E71", "weight": 50 },
+				{ "id": "1/0", "value": "#284B63", "weight": 50 }
 			],
 			"common": [
-				{ "value": "#ffffff", "weight": 50 },
-				{ "value": "##EABFCB", "weight": 15 },
-				{ "value": "#D9D9D9", "weight": 35 }
+				{ "id": "0/0", "value": "#ffffff", "weight": 50 },
+				{ "id": "1/0", "value": "##EABFCB", "weight": 15 },
+				{ "id": "2/0", "value": "#D9D9D9", "weight": 35 }
 			]
 		}
 	}

@@ -6,6 +6,7 @@ import os
 import config
 import bpy
 from random import random
+from time import sleep
 import time
 import json
 import math
@@ -34,7 +35,7 @@ def select_object_by_name(_name = 'Model1'):
     obj.select_set(obj.name == _name)
 
 def is_dna_unique(_dna_list = [], _dna = []):
-	found_dna = any(''.join(elem) == ''.join(_dna) for elem in _dna_list)
+	found_dna = any( dna1 ==  dna2 for dna1 in _dna_list for dna2 in _dna)
 	return found_dna == 0
 
 def get_rarity(_nft_index):
@@ -49,11 +50,11 @@ def create_dna(_variations, _rarity):
   rand_nums = []
 
   for variation in _variations:
-    random_num = math.floor(random() * 100) + 1
-    num = '0'
+    random_num = math.floor(random() * 100)
+    num = 0
     for element in variation['elements'][_rarity]:
       if random_num >= 100 - element['weight']:
-        num = str(variation['id'])
+        num = element['id']
 
     rand_nums.append(num)
 
@@ -79,7 +80,6 @@ def generate_metadata(_dna, _nft_no, _attributes ):
   }
   return temp_metadata
 
-# load and set hdri from path
 def load_hdri(_path):
   # Get the environment node tree of the current scene
   node_tree = bpy.context.scene.world.node_tree
@@ -121,44 +121,46 @@ def update_light_color(_color = '#ffffff'):
   for obj in bpy.context.selected_objects:
     obj.data.color = hex_to_rgb(_color)
 
-def load_material(_path, _name, _object_name = 'Humanoid'):
+def load_material(_path, _object_name):
   select_object_by_name(_object_name)
 
   with bpy.data.libraries.load(_path, link=False) as (data_from, data_to):
     data_to.materials = data_from.materials
+    active_material = bpy.data.materials.get(data_from.materials[0])
 
-    active_material = bpy.data.materials.get(_name)
-    bpy.data.objects[_object_name].active_material = active_material
+    for obj in bpy.context.selected_objects:
+        obj.active_material = active_material
 
 def load_model(_model):
   model = bpy.data.objects[_model]
   model.location = [0, 0, 0]
-  model.name = "Humanoid"
 
   return model
 
 def sign_nft(_path, _nft_no):
   nft_image = Image.open(_path)
-  font = ImageFont.truetype('./Geometria-Bold.ttf', 160)
+  font = ImageFont.truetype('./Geometria-Bold.ttf', 120)
   image_editable = ImageDraw.Draw(nft_image)
-  image_editable.text((50, 50), "#" + _nft_no, (255, 255, 255), font=font)
+  image_editable.text((40, 40), "#" + _nft_no, (255, 255, 255), font=font)
   nft_image.save(_path)
 
-def generate_nft(_new_dna, _variations, _nft_index):
-  # propagate information about  required layer contained within config into a mapping object
+def render_nft(_nft_no):
+  bpy.context.scene.render.filepath = output_path + _nft_no
+  bpy.ops.render.render(write_still=True)
 
+def generate_nft(_new_dna, _rarity, _variations, _nft_index):
   # load a random body
-  model_name = "Humanoid1"
+  model_name = _variations[3]['elements'][_rarity][_new_dna[3]]['value']
   model = load_model(model_name)
 
-  # # load a random material
-  load_material('C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/skin/legendary/galaxy/galaxy.blend', 'Galaxy')
+  # load a random skin material
+  load_material(_variations[0]['elements'][_rarity][_new_dna[0]]['value'], model_name)
 
-  # # set random light color
-  update_light_color('#251351')
+  # set random light color
+  update_light_color(_variations[4]['elements'][_rarity][_new_dna[4]]['value'])
 
   # # load random background
-  load_hdri('C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane/assets/background/legendary/outer_space_1/outer_space_2_8k.exr', model.name)
+  load_hdri(_variations[2]['elements'][_rarity][_new_dna[2]]['value'])
 
   nft_no = str(_nft_index + 1)
 
@@ -166,13 +168,11 @@ def generate_nft(_new_dna, _variations, _nft_index):
 
   save_metadata_single_file(nft_meta, nft_no)
 
-  bpy.context.scene.render.filepath = output_path + nft_no
-  bpy.ops.render.render(write_still=True)
+  render_nft(nft_no)
 
-  model.location = [0, 0, 20]
-  model.name = model_name
+  model.location = [20, 0, 0]
 
-  # shutil.copyfile(blend_file_path, output_path + '/' + nft_no +'.blend')
+  shutil.copyfile(blend_file_path, output_path + '/' + nft_no +'.blend')
 
   return nft_meta
 
@@ -181,7 +181,7 @@ def generate_nfts():
   nfts_meta = []
 
   for rarity_weight in rarity_weights:
-    dna_list_by_rarity[rarity_weight['value']] = []
+    dna_list = []
 
   for nft_index in range(edition_size):
     nft_no = str(nft_index + 1)
@@ -192,20 +192,19 @@ def generate_nfts():
     print('- rarity: ' + rarity)
 
     new_dna = create_dna(variations, rarity)
-    print('- dna: ' + str(new_dna))
 
-    if is_dna_unique(dna_list_by_rarity[rarity], new_dna):
-      new_dna = create_dna(variations, rarity)
+    if is_dna_unique(dna_list, new_dna):
 
-      print('- dna: ' + '-'.join(new_dna))
+      print('- dna: ' + '-'.join(str(elem) for elem in new_dna))
 
-      nfts_meta.append(generate_nft(new_dna, variations, nft_index))
+      dna_list.append(new_dna)
+
+      nfts_meta.append(generate_nft(new_dna, rarity, variations, nft_index))
 
       sign_nft(output_path + nft_no + '.png', nft_no)
 
     else: print('DNA exists!')
 
-    break
   save_metadata(nfts_meta)
 
 generate_nfts()
