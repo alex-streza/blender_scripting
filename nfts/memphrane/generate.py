@@ -128,8 +128,10 @@ def load_material(_path, _object_name):
     data_to.materials = data_from.materials
     active_material = bpy.data.materials.get(data_from.materials[0])
 
+    sleep(5)
+
     for obj in bpy.context.selected_objects:
-        obj.active_material = active_material
+      obj.active_material = active_material
 
 def load_model(_model):
   model = bpy.data.objects[_model]
@@ -172,7 +174,7 @@ def generate_nft(_new_dna, _rarity, _variations, _nft_index):
 
   model.location = [20, 0, 0]
 
-  shutil.copyfile(blend_file_path, output_path + '/' + nft_no +'.blend')
+  # shutil.copyfile(blend_file_path, output_path + '/' + nft_no +'.blend')
 
   return nft_meta
 
