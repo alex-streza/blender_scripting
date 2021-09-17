@@ -35,8 +35,7 @@ def select_object_by_name(_name = 'Model1'):
     obj.select_set(obj.name == _name)
 
 def is_dna_unique(_dna_list = [], _dna = []):
-	found_dna = any( dna1 ==  dna2 for dna1 in _dna_list for dna2 in _dna)
-	return found_dna == 0
+  return _dna not in _dna_list
 
 def get_rarity(_nft_index):
   rarity = 'Unknown'
@@ -126,12 +125,10 @@ def load_material(_path, _object_name):
 
   with bpy.data.libraries.load(_path, link=False) as (data_from, data_to):
     data_to.materials = data_from.materials
-    active_material = bpy.data.materials.get(data_from.materials[0])
 
-    sleep(5)
-
-    for obj in bpy.context.selected_objects:
-      obj.active_material = active_material
+  active_material = bpy.data.materials.get(data_from.materials[0].name)
+  for obj in bpy.context.selected_objects:
+    obj.active_material = active_material
 
 def load_model(_model):
   model = bpy.data.objects[_model]
@@ -179,11 +176,8 @@ def generate_nft(_new_dna, _rarity, _variations, _nft_index):
   return nft_meta
 
 def generate_nfts():
-  dna_list_by_rarity = {}
+  dna_list = []
   nfts_meta = []
-
-  for rarity_weight in rarity_weights:
-    dna_list = []
 
   for nft_index in range(edition_size):
     nft_no = str(nft_index + 1)
