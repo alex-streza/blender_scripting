@@ -1,7 +1,7 @@
 import os
 
 
-base_dir = 'C:/Users/astre/OneDrive/1_year_of_blender/september 2021/Memprhrane'
+base_dir = 'Memprhrane'
 output_path = base_dir + '/output/'
 assets_dir = base_dir + '/assets/'
 blend_file_path = base_dir + '/GenerateMaterial.blend'
