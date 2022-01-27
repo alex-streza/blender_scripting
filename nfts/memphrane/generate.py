@@ -1,6 +1,6 @@
 import sys
-sys.path += ['C:/Users/astre/Blockchain/generative_art/nfts/memphrane/']
-sys.path += ['C:/Users/astre/AppData/Roaming/Python/Python39/site-packages']
+sys.path += ['C:/Users/user/Blockchain/generative_art/nfts/memphrane/']
+sys.path += ['C:/Users/user/AppData/Roaming/Python/Python39/site-packages']
 
 import os
 import config
